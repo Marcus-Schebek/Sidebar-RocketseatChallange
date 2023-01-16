@@ -188,23 +188,9 @@ footer button{
   border: none;
   margin-left: var(--_marginLeftFooter);
 }
-/* Deixando o app responsivo Celular */
-@media only screen and (max-width: 600px) {
-  .close{
-    --_aside-widht: 16.710vw;
-    --_marginLeftTitle: 20%;
-    
-  }
-  .open{
-    --_aside-widht: 75vw;
-  }
-  #search{
-    margin-left: 11px;
-    
-  }
-  }
+
 /* Deixando o app responsivo Tablet */
-@media only screen and (min-width: 880px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .close{
     --_aside-widht: 10vw;
     --_marginLeftTitle: 12%;
@@ -222,5 +208,21 @@ footer button{
 .open footer{
     justify-content: space-between;
     padding: 0 5%;
+  }
+  }
+
+/* Deixando o app responsivo Celular */
+@media (max-width: 767px) {
+  .close{
+    --_aside-widht: 20vw;
+    --_marginLeftTitle: 23%;
+    
+  }
+  .open{
+    --_aside-widht: 75vw;
+  }
+  #search{
+    margin-left: 11px;
+    
   }
   }
