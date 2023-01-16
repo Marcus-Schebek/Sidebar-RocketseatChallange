@@ -1,0 +1,226 @@
+:root {
+  --body-bg-color: #dce4e3;
+  --green: #18c29c;
+  --light-green: #8ed7c6;
+	--light-grey: #dce4e3;
+  --text-color: #084236;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+.close{
+  --_aside-widht: 5.710vw;
+  --_visibility: hidden;
+  --_marginLeftHeader: -54px;
+  --_marginLeftFooter: -190px;
+  --_marginLeftContent: 27px;  
+  --_marginLeftTitle: 7.32%;
+  --_searchWidth: 50px;
+  --_searchBackgound: var(--light-grey);
+  
+  
+}
+
+
+.open{
+  --_aside-widht: 18.302vw;
+  --_visibility: visible;
+  --_marginLeftHeader: 29px;
+  --_marginLeftFooter: 0px;
+  --_marginLeftContent: 32px;
+  --_marginLeftTitle: 20%;
+  --_searchWidth: 90%;
+  --_searchBackgound: var(--light-green);
+  
+  
+}
+body{
+  height: 100vh;
+  background-color: var(--body-bg-color);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+}
+aside{
+  height: 100vh;
+  width: var(--_aside-widht);
+  background-color: var(--green);
+  float: left;
+  transition: .2s all;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-right: 24px;
+  margin-bottom: 40px;
+  margin-left: var(--_marginLeftHeader);
+}
+header img:nth-child(1) {
+  visibility: var(--_visibility);
+}
+header img:nth-child(2) {
+  cursor: pointer;
+}
+main {
+    padding-top: 12px;
+    transition: .8s all;
+}
+h1{
+    font-size: 2em;
+    font-weight: bold;
+    margin-left: var(--_marginLeftTitle);
+}
+
+#search{
+  display: flex;
+  align-items: center;
+  background-color: var(--_searchBackgound);
+  padding: 8px;
+  border-radius: 12px;
+  width: var(--_searchWidth);
+  height: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 0px;
+  margin-left: 14px;
+  cursor: pointer;
+}
+
+:where(#search), button, input{
+  background: none;
+  border: none;
+}
+
+
+#search input{
+  visibility: var(--_visibility);
+}
+#search input:focus{
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+#search button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+    cursor: pointer;
+}
+#content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: var(--_marginLeftContent);
+  gap: 0.25rem;
+}
+
+#content a:hover{
+ filter: brightness(0.5);
+  transition: 0.5s all;
+  background-color: var(--light-green);
+  border-radius: 1.2rem;
+  margin-inline: -1rem 1rem;
+  padding: 0 0.8rem;
+}
+
+#content a{
+  font-size: 1em;
+  align-items: center;
+  display: flex;
+  gap: 0.5em;
+  width: var(--_searchWidth);
+  height: 50px;
+  text-decoration: none;
+  border-radius: 12px;
+}
+
+#content a p{
+  visibility: var(--_visibility);
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: var(--_aside-widht);
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--light-green);
+}
+footer div{
+  display: flex;
+  
+}
+footer div #avatar{
+  visibility: var(--_visibility);
+  object-fit: cover;
+  height: 45px;
+  width: 45px;
+  border-radius: 12px;
+  margin-right: 9px;
+}
+
+
+footer span p:first-child{
+  visibility: var(--_visibility);
+  font-size: 15px;
+ 
+  
+}
+footer span p:last-child{
+  visibility: var(--_visibility);
+  font-size: 12px;
+}
+
+footer button{
+  background: none;
+  border: none;
+  margin-left: var(--_marginLeftFooter);
+}
+/* Deixando o app responsivo Celular */
+@media only screen and (max-width: 600px) {
+  .close{
+    --_aside-widht: 16.710vw;
+    --_marginLeftTitle: 20%;
+    
+  }
+  .open{
+    --_aside-widht: 75vw;
+  }
+  #search{
+    margin-left: 11px;
+    
+  }
+  }
+/* Deixando o app responsivo Tablet */
+@media only screen and (min-width: 880px) {
+  .close{
+    --_aside-widht: 10vw;
+    --_marginLeftTitle: 12%;
+
+    
+  }
+  .open{
+    --_aside-widht: 75vw;
+  }
+  #search{
+    margin-left: 16px;
+    
+  }
+
+.open footer{
+    justify-content: space-between;
+    padding: 0 5%;
+  }
+  }

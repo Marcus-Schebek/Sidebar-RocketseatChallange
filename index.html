@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sidebar Project</title>
+  <link href="styles/style.css" rel="stylesheet" type="text/css" />
+  <link>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <aside class="close" id="sidebar">
+    <header>
+      <img src="images/logo.svg" alt="logo">
+      <img src="images/menu.svg" alt="menu" onclick="classToggle()">
+    </header>
+    <nav>
+      <div id="search">
+        <button onclick="classToggle()"><img src="images/search.svg"></button>
+        <input type="text" name="search-input" placeholder="Buscar">
+      </div>
+      <div id="content">
+        <a href="#">
+          <img src="images/grid.svg">
+          <p>Dashboard</p>
+        </a>
+        <a href="#">
+          <img src="images/pet.svg">
+          <p>Pets</p>
+        </a>
+        <a href="#">
+          <img src="images/user.svg">
+          <p>Clientes</p>
+        </a>
+        <a href="#">
+          <img src="images/vet.svg">
+          <p>Vets</p>
+        </a>
+        <a href="#">
+          <img src="images/settings.svg">
+          <p>Ajustes</p>
+        </a>
+      </div>
+    </nav>
+    <footer>
+      <div>
+        <img id="avatar" src="images/photo.jpg">
+        <span>
+          <p>Elanor Pena</p>
+          <p>Veterenária</p>
+        </span>
+      </div>
+      <button><img src="images/log-out.svg"></button>
+
+    </footer>
+  </aside>
+  <main class="close" id="main">
+    <h1 class="title">Dashboard</h1>
+  </main>
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
